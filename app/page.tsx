@@ -1,10 +1,10 @@
 import Search from "./components/Search/Search";
 import { Labels } from "./constants/labels";
-import InputProvider from "./contexts/InputContext";
+import Provider from "./contexts/InputContext";
 
 export default function Home() {
   return (
-    <InputProvider>
+    <Provider>
       <div className="flex h-2/3 items-center px-6 lg:px-8">
         <div className="mx-auto max-w-xl lg:max-w-lg">
           <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -21,6 +21,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </InputProvider>
+    </Provider>
   );
 }

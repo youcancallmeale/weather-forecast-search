@@ -1,28 +1,14 @@
 "use client";
 
-import React, { createContext, useState, ReactNode } from "react";
+import React, { createContext, ReactNode } from "react";
+import { IResults } from "../models/model";
 
-type InputContextType = {
-  inputValue: string;
-  updateInputValue: (value: string) => void;
-};
-
-export const InputContext = createContext({} as InputContextType);
-
-type InputProviderProps = {
+type ProviderProps = {
   children: ReactNode;
 };
 
-export default function InputProvider({ children }: InputProviderProps) {
-  const [inputValue, setInputValue] = useState("");
+export const Context = createContext({} as IResults);
 
-  const updateInputValue = (value: string) => {
-    setInputValue(value);
-  };
-
-  return (
-    <InputContext.Provider value={{ inputValue, updateInputValue }}>
-      {children}
-    </InputContext.Provider>
-  );
+export default function Provider({ children }: ProviderProps) {
+  return <Context.Provider value={{ ...Context }}>{children}</Context.Provider>;
 }
