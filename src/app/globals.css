@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-html {
+  @apply h-full;
+}
+
+.custom-body {
+  @apply h-full relative isolate overflow-hidden bg-gray-900;
+}
+
+.custom-div {
+  @apply rounded-b-lg bg-white-5 px-3.5 py-2 text-white dark:border-dark-gray max-h-300px overflow-y-auto;
+}
+
+.custom-input {
+  @apply w-full flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6;
+}
+
+.custom-button {
+  @apply flex items-center w-full pr-4 py-3 text-sm font-medium border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white;
+}
+
+.custom-flex-center {
+  @apply flex h-2/3 items-center px-6 lg:px-8;
+}
+
+.custom-container {
+  @apply mx-auto max-w-xl lg:max-w-lg;
+}
+
+.custom-title {
+  @apply text-3xl font-bold tracking-tight text-white sm:text-4xl;
+}
+
+.custom-subtitle {
+  @apply mt-4 text-lg leading-8 text-gray-300;
+}
+
+.custom-form-container {
+  @apply mt-6 w-full;
+}
+
+.custom-form {
+  @apply w-full;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
